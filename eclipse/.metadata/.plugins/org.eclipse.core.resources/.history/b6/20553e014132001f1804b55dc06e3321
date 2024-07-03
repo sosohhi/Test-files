@@ -1,0 +1,35 @@
+package com.soso;
+
+public class CustomerManagement {
+	public void manageCustomers() {
+		while (true) {
+            System.out.println("고객 관리");
+            System.out.println("1. 고객 정보 조회");
+            System.out.println("2. 고객 정보 삭제");
+            System.out.println("3. 상품 수정");
+            System.out.println("4. 상품 삭제");
+            System.out.println("5. 돌아가기");
+            int choice = scanner.nextInt();
+            scanner.nextLine();  // consume newline character
+            switch (choice) {
+                case 1:
+                    addProduct();
+                    break;
+                case 2:
+                    viewProducts();
+                    break;
+                case 3:
+                    updateProduct();
+                    break;
+                case 4:
+                    deleteProduct();
+                    break;
+                case 5:
+                    return;  // 돌아가기
+                default:
+                    System.out.println("잘못된 선택입니다. 다시 시도해주세요.");
+            }
+        }
+	}
+
+}

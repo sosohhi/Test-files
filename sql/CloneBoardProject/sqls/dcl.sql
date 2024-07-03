@@ -1,0 +1,15 @@
+ALTER SESSION SET "_ORACLE_SCRIPT" =TRUE
+;
+
+CREATE USER boarduser1  IDENTIFIED BY 1234
+;
+
+
+-- 2. 사용자 계정 삭제
+--DROP USER board1;
+
+-- 3. 계정 권한 부여
+GRANT RESOURCE, DBA, CONNECT TO boarduser1;
+
+
+GRANT CREATE ANY TABLE TO boarduser1;

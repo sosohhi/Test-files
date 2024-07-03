@@ -1,0 +1,5 @@
+1717598337488	Rename type 'Menu'
+1717599908537	Rename type 'Subject'
+1717599927740	Rename type 'myplan'
+1717683054483	Convert local variable 'stime' to field
+1717683063581	Convert local variable 'timeFormat' to field

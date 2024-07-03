@@ -1,0 +1,46 @@
+package com.soso;
+
+import java.util.Scanner;
+
+public class Menu {
+
+	public static void main(String[] args) {
+		Customer customer = new Customer();
+		Manager manager = new Manager();
+		
+		Scanner scanner = new Scanner(System.in);
+		while(true) {
+		System.out.println("	Java ShoppingMall");
+		System.out.println("ID: ");
+		String ID = scanner.nextLine();
+		System.out.println("PW: ");
+		String Password = scanner.nextLine();
+		
+		if (manager.login(ID, Password)) {
+            showManagerMenu(scanner);
+        } else if (customer.login(ID, Password)) {
+            showCustomerMenu(scanner);
+        } else {
+            System.out.println("로그인 실패. 회원가입을 진행할까요?.");
+            registerCustomer();
+        }
+		
+		
+		}
+		
+		private static void showManagerMenu(Scanner scanner) {
+		System.out.println("Java ShoppingMall 운영자");
+		System.out.println("1. 고객 정보 확인");
+		System.out.println("2. 주문 정보 보기");
+		System.out.println("3. 게시판 글 보기");
+		System.out.println("4. 종료");
+		}
+		
+		private static void showCustomerMenu(Scanner scanner) {
+		System.out.println("Java ShoppingMall");
+		System.out.println("┌───────────────────────────────────────────────────────────────────┐");
+		System.out.println("│1.주문		2.주문확인		3.배송확인		4.자유게시판	│");
+		System.out.println("└───────────────────────────────────────────────────────────────────┘");
+	}
+
+}

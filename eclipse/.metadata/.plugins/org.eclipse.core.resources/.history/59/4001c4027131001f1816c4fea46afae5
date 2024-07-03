@@ -1,0 +1,17 @@
+package com.soso;
+
+import java.util.Scanner;
+
+public class Menu {
+
+	public static void main(String[] args) {
+		Customer customer = new Customer();
+		Order order = new Order();
+		Board board = new Board();
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("	Java ShoppingMall");
+		System.out.println("1. 고객 정보 보기");
+
+	}
+
+}
