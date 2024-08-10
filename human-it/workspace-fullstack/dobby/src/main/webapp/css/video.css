@@ -1,0 +1,11 @@
+.thumbnail-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    width: 300px;
+    height: auto;
+    border: 2px solid #000;
+}
